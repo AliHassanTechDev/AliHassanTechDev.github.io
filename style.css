@@ -240,6 +240,14 @@ font-size: 34px;
 color: #22d3ee;
 }
 
+.service-note {
+    display: block;
+    margin-top: 15px;
+    color: #64748b;
+    font-size: 12px;
+}
+
+
 /* ================= ABOUT ================= */
 
 .about-card {
