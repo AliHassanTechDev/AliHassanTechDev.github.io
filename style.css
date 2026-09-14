@@ -597,6 +597,16 @@ font-weight: bold;
 text-decoration: underline;
 }
 
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+```
+
+
 /* ================= FOOTER ================= */
 
 footer {
