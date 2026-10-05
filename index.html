@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
 
     <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+          content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Ali Hassan Tech - Web Developer Portfolio. Learning, building and creating modern websites.">
+          content="Ali Hassan Tech - Web Developer portfolio. HTML, CSS, JavaScript and responsive website development.">
 
     <meta name="google-site-verification"
-        content="fkMS2w0Q9aMJQd9gZnTklXgMXnlZef09tQnP1ck4gIs">
+          content="fkMS2w0Q9aMJQd9gZnTklXgMXnlZef09tQnP1ck4gIs">
+
+    <title>Ali Hassan Tech | Web Developer</title>
 
     <!-- Google Analytics -->
     <script async
@@ -25,13 +26,23 @@
             dataLayer.push(arguments);
         }
 
-        gtag('js', new Date());
+        gtag("js", new Date());
 
-        gtag('config', 'G-DRD0WNYX33');
+        gtag("config", "G-DRD0WNYX33");
     </script>
 
-    <title>Ali Hassan Tech | Web Developer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -39,632 +50,706 @@
 
     <!-- ================= NAVBAR ================= -->
 
-    <header>
-        <nav class="navbar">
+    <header class="header">
+
+        <div class="wrap nav-wrap">
 
             <a href="#home" class="logo">
-                Ali Hassan <span>Tech</span>
+                Ali Hassan Tech
             </a>
 
-            <div class="nav-links" id="nav-links">
+            <nav id="nav" class="nav">
 
-                <a href="#home">Home</a>
                 <a href="#about">About</a>
+
                 <a href="#skills">Skills</a>
-                <a href="#services">Services</a>
+
+                <a href="#services">What I Build</a>
+
                 <a href="#projects">Projects</a>
-                <a href="Contact.html">Contact</a>
 
-            </div>
+                <a href="#contact">Contact</a>
 
-            <div class="nav-actions">
+            </nav>
 
-                <button class="theme-btn"
-                    id="theme-btn"
-                    aria-label="Change theme">
+            <div class="nav-buttons">
+
+                <button id="theme"
+                        class="icon-btn"
+                        aria-label="Toggle theme">
                     ☀️
                 </button>
 
-                <button class="menu-btn"
-                    id="menu-btn"
-                    aria-label="Open menu">
+                <button id="menu"
+                        class="icon-btn menu-btn"
+                        aria-label="Open menu"
+                        aria-expanded="false">
                     ☰
                 </button>
 
             </div>
 
-        </nav>
+        </div>
+
     </header>
 
 
-    <!-- ================= HERO ================= -->
+    <main>
 
-    <section id="home" class="hero">
+        <!-- ================= HERO ================= -->
 
-        <div class="hero-text">
+        <section id="home" class="hero">
 
-            <p class="welcome">
-                ASSALAM-O-ALAIKUM 👋
-            </p>
+            <div class="wrap hero-grid">
 
-            <h1>
-                I'm <span>Ali Hassan</span>
-            </h1>
+                <div class="hero-content">
 
-            <h2 id="typing-text"></h2>
+                    <p class="eyebrow">
+                        Assalam-o-Alaikum 👋
+                    </p>
 
-            <p>
-                I'm learning Web Development and building my
-                skills step by step to become a professional
-                developer.
-            </p>
+                    <h1>
+                        I'm
+                        <span>Ali Hassan.</span>
+                    </h1>
 
-            <div class="hero-buttons">
+                    <p class="hero-text">
 
-                <a href="#projects" class="btn">
-                    View My Work →
-                </a>
+                        I'm learning and building with
 
-                <a href="Contact.html"
-                    class="btn secondary">
-                    Contact Me
-                </a>
+                        <strong id="typing-text">
+                            HTML & CSS
+                        </strong>
 
-            </div>
+                    </p>
 
-        </div>
+                    <p class="hero-description">
 
+                        Beginner web developer focused on
+                        creating modern, responsive and
+                        user-friendly websites.
 
-        <div class="hero-card">
+                    </p>
 
-            <div class="code-icon">
-                &lt;/&gt;
-            </div>
+                    <div class="hero-buttons">
 
-            <h3>
-                Web Developer
-            </h3>
+                        <a href="#projects"
+                           class="btn main">
+                            View Projects
+                        </a>
 
-            <p>
-                Learning • Building • Improving
-            </p>
+                        <a href="#contact"
+                           class="btn secondary">
+                            Contact Me
+                        </a>
 
-        </div>
-
-    </section>
-
-
-    <!-- ================= ABOUT ================= -->
-
-    <section id="about" class="section">
-
-        <div class="section-title">
-
-            <span></span>
-
-            <h2>
-                About Me
-            </h2>
-
-        </div>
-
-
-        <div class="about-card">
-
-            <div class="about-icon">
-                👨‍💻
-            </div>
-
-            <div class="about-content">
-
-                <h3>
-                    Hi, I'm Ali Hassan
-                </h3>
-
-                <p>
-                    I'm a beginner web developer passionate
-                    about technology, coding and creating
-                    modern websites.
-                </p>
-
-                <p>
-                    I'm currently learning HTML, CSS and
-                    JavaScript while building practical
-                    projects to improve my skills.
-                </p>
-
-                <p>
-                    My goal is to become a professional web
-                    developer, create responsive websites
-                    and work with clients around the world.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= SKILLS ================= -->
-
-    <section id="skills" class="section">
-
-        <div class="section-title">
-
-            <span></span>
-
-            <h2>
-                My Skills
-            </h2>
-
-        </div>
-
-
-        <div class="skills-grid">
-
-            <!-- HTML -->
-
-            <div class="skill-card">
-
-                <div class="skill-top">
-
-                    <h3>HTML</h3>
-
-                    <span>
-                        Beginner · 70%
-                    </span>
+                    </div>
 
                 </div>
 
-                <p>
-                    Building website structures with clean HTML.
-                </p>
 
-                <div class="progress">
+                <!-- Code Card -->
 
-                    <div class="progress-bar html"></div>
+                <div class="code-card">
+
+                    <div class="code-top">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                    <div class="code-body">
+
+                        <p>
+                            <span class="purple">const</span>
+                            developer =
+                            <span class="green">"Ali Hassan"</span>;
+                        </p>
+
+                        <p>
+                            <span class="purple">let</span>
+                            skills = [
+                            <span class="green">"HTML"</span>,
+                            <span class="green">"CSS"</span>,
+                            <span class="green">"JavaScript"</span>
+                            ];
+                        </p>
+
+                        <p>
+                            <span class="purple">let</span>
+                            goal =
+                            <span class="green">
+                                "Professional Web Developer"
+                            </span>;
+                        </p>
+
+                        <p class="comment">
+                            // Learning • Building • Improving 🚀
+                        </p>
+
+                    </div>
 
                 </div>
 
             </div>
 
+        </section>
 
-            <!-- CSS -->
 
-            <div class="skill-card">
+        <!-- ================= ABOUT ================= -->
 
-                <div class="skill-top">
+        <section id="about" class="section">
 
-                    <h3>CSS</h3>
+            <div class="wrap">
 
-                    <span>
-                        Learning · 55%
-                    </span>
-
-                </div>
-
-                <p>
-                    Creating modern designs and responsive layouts.
+                <p class="section-label">
+                    ABOUT ME
                 </p>
 
-                <div class="progress">
+                <h2>
+                    Learning today,
+                    <span>building tomorrow.</span>
+                </h2>
 
-                    <div class="progress-bar css"></div>
+                <div class="about-grid">
+
+                    <div class="about-card">
+
+                        <p>
+                            I'm Ali Hassan, a beginner web
+                            developer learning how modern
+                            websites are designed and built.
+                        </p>
+
+                        <p>
+                            My current focus is HTML, CSS and
+                            JavaScript. I practice by building
+                            real projects and improving them
+                            step by step.
+                        </p>
+
+                        <p>
+                            My long-term goal is to become a
+                            professional web developer and
+                            work with clients around the world.
+                        </p>
+
+                    </div>
+
+
+                    <div class="goals">
+
+                        <div class="goal">
+
+                            <span class="goal-number">
+                                01
+                            </span>
+
+                            <div>
+                                <h3>Learn</h3>
+
+                                <p>
+                                    Understand web development
+                                    concepts and fundamentals.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="goal">
+
+                            <span class="goal-number">
+                                02
+                            </span>
+
+                            <div>
+                                <h3>Build</h3>
+
+                                <p>
+                                    Create practical websites
+                                    and useful web projects.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="goal">
+
+                            <span class="goal-number">
+                                03
+                            </span>
+
+                            <div>
+                                <h3>Improve</h3>
+
+                                <p>
+                                    Keep improving skills and
+                                    build better experiences.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
             </div>
 
+        </section>
 
-            <!-- JAVASCRIPT -->
 
-            <div class="skill-card">
+        <!-- ================= SKILLS ================= -->
 
-                <div class="skill-top">
+        <section id="skills" class="section">
 
-                    <h3>JavaScript</h3>
+            <div class="wrap">
 
-                    <span>
-                        Learning · 60%
-                    </span>
-
-                </div>
-
-                <p>
-                    Learning JavaScript to make websites interactive.
+                <p class="section-label">
+                    SKILLS
                 </p>
 
-                <div class="progress">
+                <h2>
+                    Skills I'm
+                    <span>building.</span>
+                </h2>
 
-                    <div class="progress-bar js"></div>
+
+                <div class="skills-grid">
+
+                    <div class="skill-card">
+
+                        <div class="skill-head">
+
+                            <h3>HTML</h3>
+
+                            <span>Beginner</span>
+
+                        </div>
+
+                        <div class="level">
+                            <div style="width: 70%;"></div>
+                        </div>
+
+                        <p>
+                            Website structure,
+                            semantic elements and pages.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-head">
+
+                            <h3>CSS</h3>
+
+                            <span>Learning</span>
+
+                        </div>
+
+                        <div class="level">
+                            <div style="width: 55%;"></div>
+                        </div>
+
+                        <p>
+                            Layouts, colors, spacing,
+                            responsive design and UI.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-head">
+
+                            <h3>JavaScript</h3>
+
+                            <span>Learning</span>
+
+                        </div>
+
+                        <div class="level">
+                            <div style="width: 60%;"></div>
+                        </div>
+
+                        <p>
+                            DOM, events, conditions,
+                            arrays and browser storage.
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <div class="skill-head">
+
+                            <h3>Responsive Design</h3>
+
+                            <span>Learning</span>
+
+                        </div>
+
+                        <div class="level">
+                            <div style="width: 50%;"></div>
+                        </div>
+
+                        <p>
+                            Building websites that work
+                            across different screen sizes.
+                        </p>
+
+                    </div>
 
                 </div>
 
             </div>
 
+        </section>
 
-            <!-- RESPONSIVE DESIGN -->
 
-            <div class="skill-card">
+        <!-- ================= SERVICES ================= -->
 
-                <div class="skill-top">
+        <section id="services" class="section">
 
-                    <h3>Responsive Design</h3>
+            <div class="wrap">
 
-                    <span>
-                        Learning · 50%
-                    </span>
-
-                </div>
-
-                <p>
-                    Building websites that work on mobile and desktop.
+                <p class="section-label">
+                    WHAT I BUILD
                 </p>
 
-                <div class="progress">
+                <h2>
+                    Turning ideas into
+                    <span>web experiences.</span>
+                </h2>
 
-                    <div class="progress-bar responsive"></div>
+
+                <div class="service-grid">
+
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            &lt;/&gt;
+                        </div>
+
+                        <h3>
+                            Website Development
+                        </h3>
+
+                        <p>
+                            Clean and structured websites
+                            using HTML, CSS and JavaScript.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            ↔
+                        </div>
+
+                        <h3>
+                            Responsive Design
+                        </h3>
+
+                        <p>
+                            Websites designed to work well
+                            on mobile, tablet and desktop.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            ✦
+                        </div>
+
+                        <h3>
+                            Modern UI Design
+                        </h3>
+
+                        <p>
+                            Modern layouts with clean
+                            typography, spacing and visuals.
+                        </p>
+
+                    </article>
 
                 </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- ================= SERVICES ================= -->
+        <!-- ================= PROJECTS ================= -->
 
-    <section id="services" class="section">
+        <section id="projects" class="section">
 
-        <div class="section-title">
+            <div class="wrap">
 
-            <span></span>
-
-            <h2>
-                My Services
-            </h2>
-
-        </div>
-
-
-        <div class="services-grid">
-
-            <!-- SERVICE 01 -->
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    🌐
-                </div>
-
-                <h3>
-                    Website Development
-                </h3>
-
-                <p>
-                    I create clean and modern websites
-                    using HTML, CSS and JavaScript.
+                <p class="section-label">
+                    PROJECTS
                 </p>
 
-                <span class="service-note">
-                    Structure, layout and basic website functionality.
-                </span>
+                <h2>
+                    Things I've
+                    <span>built.</span>
+                </h2>
+
+
+                <div class="projects-grid">
+
+                    <!-- Portfolio -->
+
+                    <article class="project-card">
+
+                        <div class="shot portfolio-shot">
+
+                            <span>
+                                Ali Hassan Tech
+                            </span>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <div class="tags">
+
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+
+                            </div>
+
+                            <h3>
+                                Personal Portfolio
+                            </h3>
+
+                            <p>
+                                My personal developer portfolio
+                                showcasing my skills, projects
+                                and learning journey.
+                            </p>
+
+                            <div class="project-links">
+
+                                <a href="https://alihassantechdev.github.io"
+                                   target="_blank"
+                                   rel="noopener">
+                                    Live Site ↗
+                                </a>
+
+                                <a href="https://github.com/AliHassanTechDev/my_website"
+                                   target="_blank"
+                                   rel="noopener">
+                                    GitHub ↗
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Todo -->
+
+                    <article class="project-card">
+
+                        <div class="shot todo-shot">
+
+                            <span>
+                                To-Do List
+                            </span>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <div class="tags">
+
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+
+                            </div>
+
+                            <h3>
+                                To-Do List
+                            </h3>
+
+                            <p>
+                                A task management app using
+                                JavaScript and localStorage
+                                to save tasks in the browser.
+                            </p>
+
+                            <div class="project-links">
+
+                                <a href="Todo.html"
+                                   target="_blank">
+                                    Live Site ↗
+                                </a>
+
+                                <a href="https://github.com/AliHassanTechDev/my_website/blob/main/Todo.html"
+                                   target="_blank"
+                                   rel="noopener">
+                                    GitHub ↗
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Weather -->
+
+                    <article class="project-card">
+
+                        <div class="shot weather-shot">
+
+                            <span>
+                                Weather App
+                            </span>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <div class="tags">
+
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+
+                            </div>
+
+                            <h3>
+                                Weather App
+                            </h3>
+
+                            <p>
+                                A weather project designed
+                                to practice JavaScript,
+                                API concepts and user input.
+                            </p>
+
+                            <div class="project-links">
+
+                                <a href="Weather.html"
+                                   target="_blank">
+                                    Live Site ↗
+                                </a>
+
+                                <a href="https://github.com/AliHassanTechDev/my_website/blob/main/Weather.html"
+                                   target="_blank"
+                                   rel="noopener">
+                                    GitHub ↗
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
 
             </div>
 
-
-            <!-- SERVICE 02 -->
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    📱
-                </div>
-
-                <h3>
-                    Responsive Design
-                </h3>
-
-                <p>
-                    I design websites that look good on
-                    phones, tablets and computers.
-                </p>
-
-                <span class="service-note">
-                    Mobile-friendly layouts for different screen sizes.
-                </span>
-
-            </div>
+        </section>
 
 
-            <!-- SERVICE 03 -->
+        <!-- ================= CONTACT ================= -->
 
-            <div class="service-card">
+        <section id="contact"
+                 class="section contact-section">
 
-                <div class="service-icon">
-                    🎨
-                </div>
+            <div class="wrap contact-grid">
 
-                <h3>
-                    Modern UI Design
-                </h3>
+                <div>
 
-                <p>
-                    I build simple, attractive and
-                    user-friendly website interfaces.
-                </p>
+                    <p class="section-label">
+                        CONTACT
+                    </p>
 
-                <span class="service-note">
-                    Colors, spacing, buttons and clean visual design.
-                </span>
+                    <h2>
+                        Have a project
+                        <span>in mind?</span>
+                    </h2>
 
-            </div>
+                    <p class="contact-text">
+                        Want to discuss a website idea?
+                        Send me a message and I'll get back
+                        to you.
+                    </p>
 
-        </div>
-
-    </section>
-
-
-    <!-- ================= PROJECTS ================= -->
-
-    <section id="projects" class="section">
-
-        <div class="section-title">
-
-            <span></span>
-
-            <h2>
-                My Projects
-            </h2>
-
-        </div>
+                    <p class="email">
+                        alihassantech379@gmail.com
+                    </p>
 
 
-        <div class="projects-grid">
+                    <!-- WhatsApp -->
 
-            <!-- PROJECT 01 -->
+                    <a href="https://wa.me/923146699063"
+                       target="_blank"
+                       rel="noopener"
+                       class="whatsapp-btn">
 
-            <div class="project-card">
+                        💬 WhatsApp Me
 
-                <div class="project-number">
-                    01
-                </div>
-
-                <h3>
-                    Personal Portfolio
-                </h3>
-
-                <p>
-                    A modern personal portfolio website
-                    created using HTML, CSS and JavaScript.
-                </p>
-
-                <div class="project-tags">
-
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-
-                </div>
-
-
-                <div class="project-buttons">
-
-                    <a href="https://alihassantechdev.github.io"
-                        target="_blank"
-                        rel="noopener"
-                        class="project-link">
-                        Live Demo →
                     </a>
 
-                    <a href="https://github.com/AliHassanTechDev/my_website"
-                        target="_blank"
-                        rel="noopener"
-                        class="project-link secondary-link">
-                        GitHub →
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- PROJECT 02 -->
-
-            <div class="project-card">
-
-                <div class="project-number">
-                    02
-                </div>
-
-                <h3>
-                    To-Do List
-                </h3>
-
-                <p>
-                    An interactive To-Do List project
-                    created with HTML, CSS and JavaScript.
-                </p>
-
-                <div class="project-tags">
-
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-
                 </div>
 
 
-                <div class="project-buttons">
+                <!-- Formspree Contact Form -->
 
-                    <a href="Todo.html"
-                        class="project-link">
-                        Live Demo →
-                    </a>
+                <form id="form"
+                      action="https://formspree.io/f/mbgjvyla"
+                      method="POST"
+                      class="contact-form">
 
-                    <a href="https://github.com/AliHassanTechDev/my_website/blob/main/Todo.html"
-                        target="_blank"
-                        rel="noopener"
-                        class="project-link secondary-link">
-                        GitHub →
-                    </a>
+                    <label>
 
-                </div>
+                        Your name
 
-            </div>
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Your name"
+                            required
+                            autocomplete="name">
 
-
-            <!-- PROJECT 03 -->
-
-            <div class="project-card">
-
-                <div class="project-number">
-                    03
-                </div>
-
-                <h3>
-                    Weather App 🌦️
-                </h3>
-
-                <p>
-                    A real-time weather application that
-                    shows temperature, weather condition,
-                    humidity and wind speed using a weather API.
-                </p>
-
-                <div class="project-tags">
-
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>API</span>
-
-                </div>
+                    </label>
 
 
-                <div class="project-buttons">
+                    <label>
 
-                    <a href="Weather.html"
-                        class="project-link">
-                        Live Demo →
-                    </a>
+                        Your email
 
-                    <a href="https://github.com/AliHassanTechDev/my_website/blob/main/Weather.html"
-                        target="_blank"
-                        rel="noopener"
-                        class="project-link secondary-link">
-                        GitHub →
-                    </a>
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            required
+                            autocomplete="email">
 
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
+                    </label>
 
 
-    <!-- ================= GOAL ================= -->
-
-    <section class="goal">
-
-        <div class="goal-icon">
-            🎯
-        </div>
-
-        <h2>
-            My Goal
-        </h2>
-
-        <p>
-            My goal is to become a professional web developer,
-            create modern and responsive websites, and work
-            with clients around the world.
-        </p>
-
-        <p class="goal-note">
-            Learning every day, building real projects,
-            and improving my skills step by step.
-        </p>
-
-    </section>
-
-
-    <!-- ================= CONTACT ================= -->
-
-    <section id="contact" class="section contact">
-
-        <div class="section-title">
-
-            <span></span>
-
-            <h2>
-                Contact Me
-            </h2>
-
-        </div>
-
-
-        <div class="contact-card">
-
-            <h3>
-                Let's Work Together 🤝
-            </h3>
-
-            <p>
-                Want to connect with me or discuss a project?
-                Feel free to contact me. I'm always interested
-                in learning, building and exploring new opportunities.
-            </p>
-
-
-            <div class="contact-buttons">
-
-                <a href="mailto:alihassantech379@gmail.com"
-                    class="btn">
-                    Email Me
-                </a>
-
-                <a href="https://github.com/AliHassanTechDev"
-                    target="_blank"
-                    rel="noopener"
-                    class="btn secondary">
-                    Visit GitHub
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
-
-        <div class="footer-logo">
-            Ali Hassan <span>Tech</span>
-        </div>
-
-        <p>
-            © 2026 Ali Hassan Tech. All Rights Reserved.
-        </p>
-
-        <p class="footer-small">
-            Built with HTML, CSS & JavaScript 💙
-        </p>
-
-    </footer>
-
-
-    <!-- JavaScript -->
-    <script src="Script.js"></script>
-
-</body>
-
-</html>
+                    <
