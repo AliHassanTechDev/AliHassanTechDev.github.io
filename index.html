@@ -1,242 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Ali Hassan Tech - Beginner web developer learning HTML, CSS and JavaScript.">
-<meta name="google-site-verification" content="fkMS2w0Q9aMJQd9gZnTklXgMXnlZef09tQnP1ck4gIs">
-<title>Ali Hassan Tech | Web Developer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ali Hassan Tech - Web Developer Portfolio. Learning, building and creating modern websites.">
+  <meta name="google-site-verification" content="fkMS2w0Q9aMJQd9gZnTklXgMXnlZef09tQnP1ck4gIs">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DRD0WNYX33"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DRD0WNYX33');
+  </script>
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DRD0WNYX33"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag("js", new Date());
-  gtag("config", "G-DRD0WNYX33");
-</script>
-
-<link rel="stylesheet" href="style.css">
+  <title>Ali Hassan Tech | Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAVBAR -->
-<header class="header">
-  <div class="wrap nav-wrap">
-    <a href="#home" class="logo">Ali Hassan Tech</a>
-    <nav id="nav" class="nav">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#build">What I Build</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="nav-actions">
-      <button id="theme" class="icon-btn" type="button" aria-label="Toggle theme">🌙</button>
-      <button id="menu" class="icon-btn menu-btn" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
-    </div>
-  </div>
-</header>
-
-<main>
-
-<!-- HERO -->
-<section id="home" class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-content">
-      <p class="eyebrow">Assalam-o-Alaikum, I'm Ali Hassan.</p>
-      <h1>I'm a beginner web developer</h1>
-      <p class="hero-text">
-        I'm learning <strong id="typing-text">HTML, CSS and JavaScript</strong>,
-        and building a real project with every new thing I learn.
-      </p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn main">View my projects</a>
-        <a href="#contact" class="btn">Contact me</a>
+  <!-- NAVBAR -->
+  <header>
+    <div class="wrap bar">
+      <a class="logo" href="#top">Ali Hassan Tech</a>
+      <nav id="nav" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#build">What I Build</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div>
+        <button class="icon" id="theme" aria-label="Switch light or dark theme">☀️</button>
+        <button class="icon" id="menu" aria-label="Open menu" aria-expanded="false">☰</button>
       </div>
     </div>
+  </header>
 
-    <div class="code-card">
-      <div class="code-top"><span></span><span></span><span></span></div>
-      <div class="code-body">
-        <p><span class="code-blue">&lt;h1&gt;</span> Ali Hassan <span class="code-blue">&lt;/h1&gt;</span></p>
-        <p><span class="code-blue">&lt;p&gt;</span> Learning. Building. Improving. <span class="code-blue">&lt;/p&gt;</span></p>
+  <main id="top">
+
+    <!-- HERO -->
+    <div class="wrap hero">
+      <div>
+        <h1>Assalam-o-Alaikum, I'm <mark>Ali Hassan</mark>.</h1>
+        <p class="typing">I'm learning <strong id="typing-text"></strong><span class="cursor"></span></p>
+        <p>I'm a beginner web developer building a real project with every new thing I learn.</p>
+        <div class="btns">
+          <a class="btn main" href="#projects">View my projects</a>
+          <a class="btn alt" href="#contact">Contact me</a>
+        </div>
+      </div>
+      <div class="editor" aria-hidden="true">
+        <div class="top"><i></i><i></i><i></i></div>
+<pre><span class="t">&lt;h1&gt;</span>Ali Hassan<span class="t">&lt;/h1&gt;</span>
+<span class="t">&lt;p</span> <span class="k">class</span>=<span class="s">"goal"</span><span class="t">&gt;</span>
+  Learning.
+  Building.
+  Improving.
+<span class="t">&lt;/p&gt;</span></pre>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-  <div class="wrap">
-    <p class="section-label">ABOUT ME</p>
-    <h2>Passionate about technology and coding.</h2>
-    <div class="about-grid">
-      <div class="about-card">
-        <p>I'm passionate about technology and coding. I'm learning HTML, CSS and JavaScript, and I practice by building small, useful projects.</p>
-        <p>I want to become a professional web developer and make responsive websites for clients around the world.</p>
+    <!-- ABOUT -->
+    <section id="about"><div class="wrap">
+      <h2>About me</h2>
+      <div class="about">
+        <div>
+          <p>I'm passionate about technology and coding. I'm learning HTML, CSS and JavaScript, and I practice by building small, useful projects.</p>
+          <p>I want to become a professional web developer and make responsive websites for clients around the world.</p>
+        </div>
+        <div class="goal">
+          <h3>My goal</h3>
+          <p>Learn every day, build real projects, and improve step by step.</p>
+        </div>
       </div>
-      <div class="goal">
-        <span class="goal-number">🎯</span>
-        <h3>My goal</h3>
-        <p>Learn every day, build real projects, and improve step by step.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </div></section>
 
-<!-- SKILLS -->
-<section id="skills" class="section alt">
-  <div class="wrap">
-    <p class="section-label">SKILLS</p>
-    <h2>Where I am right now, shown honestly.</h2>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-head"><h3>HTML</h3><span>Beginner+</span></div>
-        <div class="level"><div class="level-fill" style="width:70%;"></div></div>
-        <p>Clean page structure and semantic markup.</p>
+    <!-- SKILLS -->
+    <section id="skills"><div class="wrap">
+      <h2>Skills</h2>
+      <p class="lead">Where I am right now, shown honestly.</p>
+      <div class="grid">
+        <div class="card"><h3>HTML</h3><div class="lv">Beginner+</div><div class="level"><span class="on"></span><span class="on"></span><span class="on"></span><span></span></div><p>Clean page structure and semantic markup.</p></div>
+        <div class="card"><h3>CSS</h3><div class="lv">Learning</div><div class="level"><span class="on"></span><span class="on"></span><span></span><span></span></div><p>Modern layouts, colors and spacing.</p></div>
+        <div class="card"><h3>JavaScript</h3><div class="lv">Learning</div><div class="level"><span class="on"></span><span class="on"></span><span></span><span></span></div><p>Making pages interactive.</p></div>
+        <div class="card"><h3>Responsive design</h3><div class="lv">Learning</div><div class="level"><span class="on"></span><span class="on"></span><span></span><span></span></div><p>Layouts that work on phones and computers.</p></div>
       </div>
-      <div class="skill-card">
-        <div class="skill-head"><h3>CSS</h3><span>Learning</span></div>
-        <div class="level"><div class="level-fill" style="width:55%;"></div></div>
-        <p>Modern layouts, colors and spacing.</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-head"><h3>JavaScript</h3><span>Learning</span></div>
-        <div class="level"><div class="level-fill" style="width:60%;"></div></div>
-        <p>Making pages interactive.</p>
-      </div>
-      <div class="skill-card">
-        <div class="skill-head"><h3>Responsive design</h3><span>Learning</span></div>
-        <div class="level"><div class="level-fill" style="width:50%;"></div></div>
-        <p>Layouts that work on phones and computers.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </div></section>
 
-<!-- WHAT I BUILD -->
-<section id="build" class="section">
-  <div class="wrap">
-    <p class="section-label">WHAT I CAN BUILD</p>
-    <h2>Simple, clean websites for people and small businesses.</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <span class="service-icon">🌐</span>
-        <h3>Websites</h3>
-        <p>Clean pages with HTML, CSS and JavaScript: structure, layout and basic features.</p>
+    <!-- WHAT I BUILD -->
+    <section id="build"><div class="wrap">
+      <h2>What I can build</h2>
+      <p class="lead">Simple, clean websites for people and small businesses.</p>
+      <div class="grid">
+        <div class="card"><h3>🌐 Websites</h3><p>Clean pages with HTML, CSS and JavaScript: structure, layout and basic features.</p></div>
+        <div class="card"><h3>📱 Mobile-friendly layouts</h3><p>Pages that look good on phones, tablets and computers.</p></div>
+        <div class="card"><h3>🎨 Simple interfaces</h3><p>Clear colors, spacing and buttons that are easy to use.</p></div>
       </div>
-      <div class="service-card">
-        <span class="service-icon">📱</span>
-        <h3>Mobile-friendly layouts</h3>
-        <p>Pages that look good on phones, tablets and computers.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-icon">🎨</span>
-        <h3>Simple interfaces</h3>
-        <p>Clear colors, spacing and buttons that are easy to use.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </div></section>
 
-<!-- PROJECTS -->
-<section id="projects" class="section alt">
-  <div class="wrap">
-    <p class="section-label">PROJECTS</p>
-    <h2>Small projects I built while learning.</h2>
-    <div class="projects-grid">
-
-      <article class="project-card">
-        <div class="shot"><span class="project-emoji">🧑‍💻</span></div>
-        <div class="project-content">
+    <!-- PROJECTS -->
+    <section id="projects"><div class="wrap">
+      <h2>Projects</h2>
+      <p class="lead">Small projects I built while learning.</p>
+      <div class="grid">
+        <article class="card">
+          <div class="shot" role="img" aria-label="Portfolio project">🧑‍💻</div>
           <h3>Personal Portfolio</h3>
           <p>A modern personal website that introduces me and my work.</p>
           <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-          <div class="project-links">
+          <div class="links">
             <a href="https://alihassantechdev.github.io" target="_blank" rel="noopener">Live demo</a>
             <a href="https://github.com/AliHassanTechDev/my_website" target="_blank" rel="noopener">GitHub</a>
           </div>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="shot"><span class="project-emoji">✅</span></div>
-        <div class="project-content">
+        </article>
+        <article class="card">
+          <div class="shot" role="img" aria-label="To-Do List project">✅</div>
           <h3>To-Do List</h3>
           <p>An interactive list where you can add, finish and remove tasks.</p>
           <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-          <div class="project-links">
-            <a href="Todo.html" target="_blank">Live demo</a>
+          <div class="links">
+            <a href="Todo.html">Live demo</a>
             <a href="https://github.com/AliHassanTechDev/my_website/blob/main/Todo.html" target="_blank" rel="noopener">GitHub</a>
           </div>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="shot"><span class="project-emoji">🌦️</span></div>
-        <div class="project-content">
+        </article>
+        <article class="card">
+          <div class="shot" role="img" aria-label="Weather App project">🌦️</div>
           <h3>Weather App</h3>
           <p>Shows temperature, condition, humidity and wind speed for any city using a weather API.</p>
           <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>API</span></div>
-          <div class="project-links">
-            <a href="Weather.html" target="_blank">Live demo</a>
+          <div class="links">
+            <a href="Weather.html">Live demo</a>
             <a href="https://github.com/AliHassanTechDev/my_website/blob/main/Weather.html" target="_blank" rel="noopener">GitHub</a>
           </div>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section">
-  <div class="wrap">
-    <p class="section-label">CONTACT</p>
-    <h2>Let's work together</h2>
-    <div class="contact-grid">
-
-      <div class="contact-card">
-        <h3>Have a project in mind or want to connect?</h3>
-        <p>Send me a message and let's talk.</p>
-        <p>Email: <a href="mailto:alihassantech379@gmail.com">alihassantech379@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/AliHassanTechDev" target="_blank" rel="noopener">AliHassanTechDev</a></p>
-        <a href="https://wa.me/923146699063" target="_blank" rel="noopener" class="whatsapp-btn">💬 WhatsApp Me</a>
+        </article>
       </div>
+    </div></section>
 
-      <!-- Formspree Form -->
-      <form id="form" action="https://formspree.io/f/mbgjvyla" method="POST" class="contact-form">
-        <label>Your name
-          <input type="text" name="name" required autocomplete="name">
-        </label>
-        <label>Your email
-          <input type="email" name="email" required autocomplete="email">
-        </label>
-        <label>Message
-          <textarea name="message" rows="5" required></textarea>
-        </label>
-        <button class="btn main" type="submit">Send message</button>
-      </form>
+    <!-- CONTACT -->
+    <section id="contact"><div class="wrap">
+      <h2>Let's work together</h2>
+      <p class="lead">Have a project in mind or want to connect? Send me a message.</p>
+      <div class="contact">
+        <form id="form" action="https://formspree.io/f/mbgjvyla" method="POST">
+          <label>Your name<input name="name" required autocomplete="name"></label>
+          <label>Your email<input type="email" name="email" required autocomplete="email"></label>
+          <label>Message<textarea name="message" rows="4" required></textarea></label>
+          <button class="btn main" type="submit">Send message</button>
+        </form>
+        <div class="ways">
+          <a href="mailto:alihassantech379@gmail.com">Email: alihassantech379@gmail.com</a>
+          <a href="https://github.com/AliHassanTechDev" target="_blank" rel="noopener">GitHub: AliHassanTechDev</a>
+          <a href="https://wa.me/923146699063" target="_blank" rel="noopener">💬 WhatsApp Me</a>
+        </div>
+      </div>
+    </div></section>
 
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © 2026 Ali Hassan Tech. All rights reserved. Built with HTML, CSS and JavaScript 💙
     </div>
-  </div>
-</section>
+  </footer>
 
-</main>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="wrap footer-inner">
-    <p>© 2026 Ali Hassan Tech. All rights reserved.</p>
-    <p>Built with HTML, CSS and JavaScript 💙</p>
-  </div>
-</footer>
-
-<script src="Script.js"></script>
+  <script src="Script.js"></script>
 </body>
 </html>
