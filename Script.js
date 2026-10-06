@@ -1,131 +1,240 @@
-// ===== BUTTON ANIMATION =====
+// ================= THEME =================
 
-const buttons = document.querySelectorAll(".btn");
+var root = document.documentElement;
+var themeBtn = document.getElementById("theme");
 
-buttons.forEach(button => {
-    button.addEventListener("click", () => {
-        button.classList.add("clicked");
+function isDark() {
 
-        setTimeout(() => {
-            button.classList.remove("clicked");
-        }, 180);
-    });
-});
+    var theme = root.getAttribute("data-theme");
 
-
-// ===== SCROLL ANIMATION =====
-
-const animatedElements = document.querySelectorAll(
-    ".section, .skill-card, .project-card, .about-card, .service-card, .goal, .contact-card"
-);
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-            observer.unobserve(entry.target);
-        }
-    });
-}, {
-    threshold: 0.12
-});
-
-animatedElements.forEach(element => {
-    element.classList.add("hidden");
-    observer.observe(element);
-});
-
-
-// ===== TYPING EFFECT =====
-
-const typingText = document.getElementById("typing-text");
-
-const texts = [
-    "Future Web Developer 💻",
-    "HTML & CSS Learner 🚀",
-    "JavaScript Learner ⚡"
-];
-
-let textIndex = 0;
-let charIndex = 0;
-let deleting = false;
-
-function typeEffect() {
-
-    const currentText = texts[textIndex];
-
-    if (!deleting) {
-        typingText.textContent = currentText.substring(0, charIndex + 1);
-        charIndex++;
-
-        if (charIndex === currentText.length) {
-            deleting = true;
-            setTimeout(typeEffect, 1500);
-            return;
-        }
-
-        setTimeout(typeEffect, 90);
-
-    } else {
-
-        typingText.textContent = currentText.substring(0, charIndex - 1);
-        charIndex--;
-
-        if (charIndex === 0) {
-            deleting = false;
-            textIndex = (textIndex + 1) % texts.length;
-        }
-
-        setTimeout(typeEffect, 50);
+    if (theme) {
+        return theme === "dark";
     }
+
+    return window.matchMedia(
+        "(prefers-color-scheme: dark)"
+    ).matches;
 }
 
-typeEffect();
 
+function updateThemeIcon() {
 
-// ===== MOBILE MENU =====
-
-const menuBtn = document.getElementById("menu-btn");
-const navLinks = document.querySelector(".nav-links");
-
-menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
-
-
-// Close menu after clicking a link
-
-const navItems = document.querySelectorAll(".nav-links a");
-
-navItems.forEach(item => {
-    item.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-    });
-});
-
-
-// ===== DARK / LIGHT MODE =====
-
-const themeBtn = document.getElementById("theme-btn");
-
-const savedTheme = localStorage.getItem("theme");
-
-if (savedTheme === "light") {
-    document.body.classList.add("light-mode");
-    themeBtn.textContent = "🌙";
-} else {
-    themeBtn.textContent = "☀️";
-}
-
-themeBtn.addEventListener("click", () => {
-
-    document.body.classList.toggle("light-mode");
-
-    if (document.body.classList.contains("light-mode")) {
+    if (isDark()) {
         themeBtn.textContent = "🌙";
-        localStorage.setItem("theme", "light");
     } else {
         themeBtn.textContent = "☀️";
-        localStorage.setItem("theme", "dark");
     }
-});
+}
+
+
+// Save theme preference
+
+try {
+
+    var savedTheme =
+        localStorage.getItem("theme");
+
+    if (savedTheme) {
+        root.setAttribute(
+            "data-theme",
+            savedTheme
+        );
+    }
+
+} catch (error) {}
+
+
+// Theme button
+
+themeBtn.addEventListener(
+    "click",
+    function () {
+
+        var nextTheme =
+            isDark()
+                ? "light"
+                : "dark";
+
+        root.setAttribute(
+            "data-theme",
+            nextTheme
+        );
+
+        try {
+
+            localStorage.setItem(
+                "theme",
+                nextTheme
+            );
+
+        } catch (error) {}
+
+        updateThemeIcon();
+
+    }
+);
+
+
+updateThemeIcon();
+
+
+// ================= MOBILE MENU =================
+
+var nav =
+    document.getElementById("nav");
+
+var menuBtn =
+    document.getElementById("menu");
+
+
+menuBtn.addEventListener(
+    "click",
+    function () {
+
+        var isOpen =
+            nav.classList.toggle("open");
+
+        menuBtn.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+    }
+);
+
+
+// Close menu when a link is clicked
+
+nav.addEventListener(
+    "click",
+    function () {
+
+        nav.classList.remove("open");
+
+        menuBtn.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    }
+);
+
+
+// ================= TYPING EFFECT =================
+
+var words = [
+
+    "HTML, CSS and JavaScript",
+
+    "responsive websites",
+
+    "web development",
+
+    "real projects"
+
+];
+
+
+var typingEl =
+    document.getElementById(
+        "typing-text"
+    );
+
+
+var wordIndex = 0;
+
+var charIndex = 0;
+
+var deleting = false;
+
+
+var reduceMotion =
+    window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+
+function typeText() {
+
+    var word =
+        words[wordIndex];
+
+
+    // Accessibility:
+    // If user prefers reduced motion,
+    // don't run animation.
+
+    if (reduceMotion) {
+
+        typingEl.textContent =
+            word;
+
+        return;
+
+    }
+
+
+    typingEl.textContent =
+        word.slice(
+            0,
+            charIndex
+        );
+
+
+    var delay =
+        deleting
+            ? 45
+            : 90;
+
+
+    // Finished typing
+
+    if (
+        !deleting &&
+        charIndex === word.length
+    ) {
+
+        deleting = true;
+
+        delay = 1400;
+
+    }
+
+
+    // Finished deleting
+
+    else if (
+        deleting &&
+        charIndex === 0
+    ) {
+
+        deleting = false;
+
+        wordIndex =
+            (wordIndex + 1)
+            % words.length;
+
+        delay = 400;
+
+    }
+
+
+    else {
+
+        charIndex +=
+            deleting
+                ? -1
+                : 1;
+
+    }
+
+
+    setTimeout(
+        typeText,
+        delay
+    );
+
+}
+
+
+typeText();
