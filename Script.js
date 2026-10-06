@@ -1,151 +1,71 @@
-// ===============================
-// Ali Hassan Tech - Script.js
-// ===============================
-
-
-// 1. Theme Button
+// ===== Theme (light/dark, remembers your choice) =====
 var root = document.documentElement;
 var themeBtn = document.getElementById("theme");
 
-
-// Check saved theme
-var savedTheme = localStorage.getItem("theme");
-
-if (savedTheme === "dark") {
-    root.setAttribute("data-theme", "dark");
-
-    if (themeBtn) {
-        themeBtn.textContent = "☀️";
-    }
-} else {
-    root.removeAttribute("data-theme");
-
-    if (themeBtn) {
-        themeBtn.textContent = "🌙";
-    }
+function currentTheme() {
+  return root.getAttribute("data-theme") || "light";
 }
 
-
-// Theme button click
-if (themeBtn) {
-    themeBtn.addEventListener("click", function () {
-
-        var currentTheme = root.getAttribute("data-theme");
-
-        if (currentTheme === "dark") {
-
-            // Dark → Light
-            root.removeAttribute("data-theme");
-            localStorage.setItem("theme", "light");
-            themeBtn.textContent = "🌙";
-
-        } else {
-
-            // Light → Dark
-            root.setAttribute("data-theme", "dark");
-            localStorage.setItem("theme", "dark");
-            themeBtn.textContent = "☀️";
-        }
-
-    });
+function applyTheme(theme) {
+  root.setAttribute("data-theme", theme);
+  themeBtn.textContent = theme === "dark" ? "🌙" : "☀️";
 }
 
+var startTheme = null;
+try { startTheme = localStorage.getItem("theme"); } catch (e) {}
+if (!startTheme) {
+  startTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+applyTheme(startTheme);
 
+themeBtn.addEventListener("click", function () {
+  var next = currentTheme() === "dark" ? "light" : "dark";
+  applyTheme(next);
+  try { localStorage.setItem("theme", next); } catch (e) {}
+});
 
-// ===============================
-// 2. Mobile Menu
-// ===============================
-
-var menuBtn = document.getElementById("menu");
+// ===== Mobile menu =====
 var nav = document.getElementById("nav");
+var menuBtn = document.getElementById("menu");
 
-if (menuBtn && nav) {
+menuBtn.addEventListener("click", function () {
+  var open = nav.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded", open);
+});
 
-    menuBtn.addEventListener("click", function () {
+nav.addEventListener("click", function (e) {
+  if (e.target.tagName === "A") {
+    nav.classList.remove("open");
+    menuBtn.setAttribute("aria-expanded", "false");
+  }
+});
 
-        nav.classList.toggle("open");
+// ===== Typing text in hero =====
+var words = ["HTML & CSS", "JavaScript", "responsive websites", "web development"];
+var typingEl = document.getElementById("typing-text");
+var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+var w = 0, c = 0, deleting = false;
 
-    });
+function type() {
+  var word = words[w];
+  typingEl.textContent = word.slice(0, c);
+  var delay = deleting ? 45 : 90;
 
-
-    // Close menu after clicking a link
-    var navLinks = nav.querySelectorAll("a");
-
-    navLinks.forEach(function (link) {
-
-        link.addEventListener("click", function () {
-            nav.classList.remove("open");
-        });
-
-    });
-
+  if (!deleting && c === word.length) {
+    deleting = true;
+    delay = 1400;
+  } else if (deleting && c === 0) {
+    deleting = false;
+    w = (w + 1) % words.length;
+    delay = 400;
+  } else {
+    c += deleting ? -1 : 1;
+  }
+  setTimeout(type, delay);
 }
 
-
-
-// ===============================
-// 3. Typing Effect
-// ===============================
-
-var typingText = document.getElementById("typing");
-
-if (typingText) {
-
-    var words = [
-        "HTML, CSS and JavaScript",
-        "responsive websites",
-        "web development",
-        "real projects"
-    ];
-
-    var wordIndex = 0;
-    var charIndex = 0;
-    var deleting = false;
-
-
-    function typeEffect() {
-
-        var currentWord = words[wordIndex];
-
-        if (!deleting) {
-
-            typingText.textContent =
-                currentWord.substring(0, charIndex + 1);
-
-            charIndex++;
-
-            if (charIndex === currentWord.length) {
-
-                deleting = true;
-
-                setTimeout(typeEffect, 1500);
-                return;
-            }
-
-        } else {
-
-            typingText.textContent =
-                currentWord.substring(0, charIndex - 1);
-
-            charIndex--;
-
-            if (charIndex === 0) {
-
-                deleting = false;
-
-                wordIndex++;
-
-                if (wordIndex === words.length) {
-                    wordIndex = 0;
-                }
-
-            }
-
-        }
-
-        setTimeout(typeEffect, deleting ? 50 : 90);
-    }
-
-
-    typeEffect();
+if (typingEl && !reduceMotion) {
+  type();
 }
+
+// Contact form: sent by Formspree (action in index.html), so no JS needed.
