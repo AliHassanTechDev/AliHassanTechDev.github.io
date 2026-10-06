@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Ali Hassan Tech - Web Developer portfolio. HTML, CSS, JavaScript and responsive website development.">
+          content="Ali Hassan Tech - Web Developer portfolio. HTML, CSS, JavaScript and responsive web development.">
 
     <meta name="google-site-verification"
           content="fkMS2w0Q9aMJQd9gZnTklXgMXnlZef09tQnP1ck4gIs">
 
     <title>Ali Hassan Tech | Web Developer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
 
     <!-- Google Analytics -->
     <script async
@@ -31,18 +40,6 @@
         gtag("config", "G-DRD0WNYX33");
     </script>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap"
-          rel="stylesheet">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -64,7 +61,7 @@
 
                 <a href="#skills">Skills</a>
 
-                <a href="#services">What I Build</a>
+                <a href="#build">What I Build</a>
 
                 <a href="#projects">Projects</a>
 
@@ -72,18 +69,22 @@
 
             </nav>
 
-            <div class="nav-buttons">
+            <div class="nav-actions">
 
-                <button id="theme"
-                        class="icon-btn"
-                        aria-label="Toggle theme">
+                <button
+                    id="theme"
+                    class="icon-btn"
+                    type="button"
+                    aria-label="Toggle theme">
                     ☀️
                 </button>
 
-                <button id="menu"
-                        class="icon-btn menu-btn"
-                        aria-label="Open menu"
-                        aria-expanded="false">
+                <button
+                    id="menu"
+                    class="icon-btn menu-btn"
+                    type="button"
+                    aria-label="Open menu"
+                    aria-expanded="false">
                     ☰
                 </button>
 
@@ -105,41 +106,36 @@
                 <div class="hero-content">
 
                     <p class="eyebrow">
-                        Assalam-o-Alaikum 👋
+                        ASSALAM-O-ALAIKUM 👋
                     </p>
 
                     <h1>
-                        I'm
-                        <span>Ali Hassan.</span>
+                        I'm Ali Hassan.
                     </h1>
 
                     <p class="hero-text">
 
-                        I'm learning and building with
+                        I am learning and building
+                        <strong id="typing-text"></strong>
 
-                        <strong id="typing-text">
-                            HTML & CSS
-                        </strong>
+                        <span class="cursor">|</span>
 
                     </p>
 
                     <p class="hero-description">
 
-                        Beginner web developer focused on
-                        creating modern, responsive and
-                        user-friendly websites.
+                        Beginner web developer focused on creating
+                        modern, responsive and user-friendly websites.
 
                     </p>
 
                     <div class="hero-buttons">
 
-                        <a href="#projects"
-                           class="btn main">
+                        <a href="#projects" class="btn main">
                             View Projects
                         </a>
 
-                        <a href="#contact"
-                           class="btn secondary">
+                        <a href="#contact" class="btn">
                             Contact Me
                         </a>
 
@@ -163,30 +159,26 @@
                     <div class="code-body">
 
                         <p>
-                            <span class="purple">const</span>
-                            developer =
-                            <span class="green">"Ali Hassan"</span>;
+                            <span class="code-blue">&lt;div</span>
+                            <span class="code-yellow">class</span>=
+                            <span class="code-green">"developer"</span>
+                            <span class="code-blue">&gt;</span>
+                        </p>
+
+                        <p class="indent">
+                            <span class="code-blue">&lt;h1&gt;</span>
+                            Ali Hassan
+                            <span class="code-blue">&lt;/h1&gt;</span>
+                        </p>
+
+                        <p class="indent">
+                            <span class="code-blue">&lt;p&gt;</span>
+                            Web Developer
+                            <span class="code-blue">&lt;/p&gt;</span>
                         </p>
 
                         <p>
-                            <span class="purple">let</span>
-                            skills = [
-                            <span class="green">"HTML"</span>,
-                            <span class="green">"CSS"</span>,
-                            <span class="green">"JavaScript"</span>
-                            ];
-                        </p>
-
-                        <p>
-                            <span class="purple">let</span>
-                            goal =
-                            <span class="green">
-                                "Professional Web Developer"
-                            </span>;
-                        </p>
-
-                        <p class="comment">
-                            // Learning • Building • Improving 🚀
+                            <span class="code-blue">&lt;/div&gt;</span>
                         </p>
 
                     </div>
@@ -209,8 +201,9 @@
                 </p>
 
                 <h2>
-                    Learning today,
-                    <span>building tomorrow.</span>
+                    Learning today.
+                    <br>
+                    Building for tomorrow.
                 </h2>
 
                 <div class="about-grid">
@@ -218,81 +211,35 @@
                     <div class="about-card">
 
                         <p>
-                            I'm Ali Hassan, a beginner web
-                            developer learning how modern
-                            websites are designed and built.
+                            I'm Ali Hassan, a beginner web developer
+                            who is learning how websites work and how
+                            to build modern digital experiences.
                         </p>
 
                         <p>
-                            My current focus is HTML, CSS and
-                            JavaScript. I practice by building
-                            real projects and improving them
-                            step by step.
-                        </p>
-
-                        <p>
-                            My long-term goal is to become a
-                            professional web developer and
-                            work with clients around the world.
+                            My current focus is HTML, CSS and JavaScript.
+                            I enjoy learning by building real projects
+                            and improving them step by step.
                         </p>
 
                     </div>
 
 
-                    <div class="goals">
+                    <div class="goal">
 
-                        <div class="goal">
+                        <span class="goal-number">
+                            01
+                        </span>
 
-                            <span class="goal-number">
-                                01
-                            </span>
+                        <h3>
+                            My Goal
+                        </h3>
 
-                            <div>
-                                <h3>Learn</h3>
-
-                                <p>
-                                    Understand web development
-                                    concepts and fundamentals.
-                                </p>
-                            </div>
-
-                        </div>
-
-
-                        <div class="goal">
-
-                            <span class="goal-number">
-                                02
-                            </span>
-
-                            <div>
-                                <h3>Build</h3>
-
-                                <p>
-                                    Create practical websites
-                                    and useful web projects.
-                                </p>
-                            </div>
-
-                        </div>
-
-
-                        <div class="goal">
-
-                            <span class="goal-number">
-                                03
-                            </span>
-
-                            <div>
-                                <h3>Improve</h3>
-
-                                <p>
-                                    Keep improving skills and
-                                    build better experiences.
-                                </p>
-                            </div>
-
-                        </div>
+                        <p>
+                            Become a professional web developer,
+                            build responsive websites and work with
+                            clients from around the world.
+                        </p>
 
                     </div>
 
@@ -305,7 +252,7 @@
 
         <!-- ================= SKILLS ================= -->
 
-        <section id="skills" class="section">
+        <section id="skills" class="section alt">
 
             <div class="wrap">
 
@@ -314,12 +261,11 @@
                 </p>
 
                 <h2>
-                    Skills I'm
-                    <span>building.</span>
+                    What I'm learning.
                 </h2>
 
-
                 <div class="skills-grid">
+
 
                     <div class="skill-card">
 
@@ -332,12 +278,16 @@
                         </div>
 
                         <div class="level">
-                            <div style="width: 70%;"></div>
+
+                            <div
+                                class="level-fill"
+                                style="width:70%;">
+                            </div>
+
                         </div>
 
                         <p>
-                            Website structure,
-                            semantic elements and pages.
+                            Website structure and semantic HTML.
                         </p>
 
                     </div>
@@ -354,12 +304,16 @@
                         </div>
 
                         <div class="level">
-                            <div style="width: 55%;"></div>
+
+                            <div
+                                class="level-fill"
+                                style="width:55%;">
+                            </div>
+
                         </div>
 
                         <p>
-                            Layouts, colors, spacing,
-                            responsive design and UI.
+                            Styling, layouts and responsive design.
                         </p>
 
                     </div>
@@ -376,12 +330,16 @@
                         </div>
 
                         <div class="level">
-                            <div style="width: 60%;"></div>
+
+                            <div
+                                class="level-fill"
+                                style="width:60%;">
+                            </div>
+
                         </div>
 
                         <p>
-                            DOM, events, conditions,
-                            arrays and browser storage.
+                            Interactivity and website functionality.
                         </p>
 
                     </div>
@@ -398,12 +356,16 @@
                         </div>
 
                         <div class="level">
-                            <div style="width: 50%;"></div>
+
+                            <div
+                                class="level-fill"
+                                style="width:50%;">
+                            </div>
+
                         </div>
 
                         <p>
-                            Building websites that work
-                            across different screen sizes.
+                            Websites that work across different screens.
                         </p>
 
                     </div>
@@ -415,9 +377,9 @@
         </section>
 
 
-        <!-- ================= SERVICES ================= -->
+        <!-- ================= WHAT I BUILD ================= -->
 
-        <section id="services" class="section">
+        <section id="build" class="section">
 
             <div class="wrap">
 
@@ -426,65 +388,66 @@
                 </p>
 
                 <h2>
-                    Turning ideas into
-                    <span>web experiences.</span>
+                    Simple websites.
+                    <br>
+                    Real functionality.
                 </h2>
 
+                <div class="services-grid">
 
-                <div class="service-grid">
 
-                    <article class="service-card">
+                    <div class="service-card">
 
-                        <div class="service-icon">
-                            &lt;/&gt;
-                        </div>
+                        <span class="service-number">
+                            01
+                        </span>
 
                         <h3>
                             Website Development
                         </h3>
 
                         <p>
-                            Clean and structured websites
-                            using HTML, CSS and JavaScript.
+                            Modern websites using HTML,
+                            CSS and JavaScript.
                         </p>
 
-                    </article>
+                    </div>
 
 
-                    <article class="service-card">
+                    <div class="service-card">
 
-                        <div class="service-icon">
-                            ↔
-                        </div>
+                        <span class="service-number">
+                            02
+                        </span>
 
                         <h3>
                             Responsive Design
                         </h3>
 
                         <p>
-                            Websites designed to work well
-                            on mobile, tablet and desktop.
+                            Mobile-friendly layouts that
+                            work on different screen sizes.
                         </p>
 
-                    </article>
+                    </div>
 
 
-                    <article class="service-card">
+                    <div class="service-card">
 
-                        <div class="service-icon">
-                            ✦
-                        </div>
+                        <span class="service-number">
+                            03
+                        </span>
 
                         <h3>
                             Modern UI Design
                         </h3>
 
                         <p>
-                            Modern layouts with clean
-                            typography, spacing and visuals.
+                            Clean interfaces with a modern
+                            and professional appearance.
                         </p>
 
-                    </article>
+                    </div>
 
                 </div>
 
@@ -495,7 +458,7 @@
 
         <!-- ================= PROJECTS ================= -->
 
-        <section id="projects" class="section">
+        <section id="projects" class="section alt">
 
             <div class="wrap">
 
@@ -504,12 +467,11 @@
                 </p>
 
                 <h2>
-                    Things I've
-                    <span>built.</span>
+                    Things I've built.
                 </h2>
 
-
                 <div class="projects-grid">
+
 
                     <!-- Portfolio -->
 
@@ -538,23 +500,24 @@
                             </h3>
 
                             <p>
-                                My personal developer portfolio
-                                showcasing my skills, projects
-                                and learning journey.
+                                My personal web developer portfolio
+                                where I showcase my skills and projects.
                             </p>
 
                             <div class="project-links">
 
-                                <a href="https://alihassantechdev.github.io"
-                                   target="_blank"
-                                   rel="noopener">
-                                    Live Site ↗
+                                <a
+                                    href="https://alihassantechdev.github.io"
+                                    target="_blank"
+                                    rel="noopener">
+                                    Live Site →
                                 </a>
 
-                                <a href="https://github.com/AliHassanTechDev/my_website"
-                                   target="_blank"
-                                   rel="noopener">
-                                    GitHub ↗
+                                <a
+                                    href="https://github.com/AliHassanTechDev/my_website"
+                                    target="_blank"
+                                    rel="noopener">
+                                    GitHub →
                                 </a>
 
                             </div>
@@ -591,22 +554,23 @@
                             </h3>
 
                             <p>
-                                A task management app using
-                                JavaScript and localStorage
-                                to save tasks in the browser.
+                                A JavaScript task manager with
+                                browser data storage.
                             </p>
 
                             <div class="project-links">
 
-                                <a href="Todo.html"
-                                   target="_blank">
-                                    Live Site ↗
+                                <a
+                                    href="Todo.html"
+                                    target="_blank">
+                                    Live Site →
                                 </a>
 
-                                <a href="https://github.com/AliHassanTechDev/my_website/blob/main/Todo.html"
-                                   target="_blank"
-                                   rel="noopener">
-                                    GitHub ↗
+                                <a
+                                    href="https://github.com/AliHassanTechDev/my_website/blob/main/Todo.html"
+                                    target="_blank"
+                                    rel="noopener">
+                                    GitHub →
                                 </a>
 
                             </div>
@@ -643,22 +607,23 @@
                             </h3>
 
                             <p>
-                                A weather project designed
-                                to practice JavaScript,
-                                API concepts and user input.
+                                A simple weather project built
+                                while learning JavaScript.
                             </p>
 
                             <div class="project-links">
 
-                                <a href="Weather.html"
-                                   target="_blank">
-                                    Live Site ↗
+                                <a
+                                    href="Weather.html"
+                                    target="_blank">
+                                    Live Site →
                                 </a>
 
-                                <a href="https://github.com/AliHassanTechDev/my_website/blob/main/Weather.html"
-                                   target="_blank"
-                                   rel="noopener">
-                                    GitHub ↗
+                                <a
+                                    href="https://github.com/AliHassanTechDev/my_website/blob/main/Weather.html"
+                                    target="_blank"
+                                    rel="noopener">
+                                    GitHub →
                                 </a>
 
                             </div>
@@ -676,80 +641,135 @@
 
         <!-- ================= CONTACT ================= -->
 
-        <section id="contact"
-                 class="section contact-section">
+        <section id="contact" class="section">
 
-            <div class="wrap contact-grid">
+            <div class="wrap">
 
-                <div>
+                <p class="section-label">
+                    CONTACT
+                </p>
 
-                    <p class="section-label">
-                        CONTACT
-                    </p>
+                <h2>
+                    Let's build something.
+                </h2>
 
-                    <h2>
-                        Have a project
-                        <span>in mind?</span>
-                    </h2>
-
-                    <p class="contact-text">
-                        Want to discuss a website idea?
-                        Send me a message and I'll get back
-                        to you.
-                    </p>
-
-                    <p class="email">
-                        alihassantech379@gmail.com
-                    </p>
+                <div class="contact-grid">
 
 
-                    <!-- WhatsApp -->
+                    <div class="contact-card">
 
-                    <a href="https://wa.me/923146699063"
-                       target="_blank"
-                       rel="noopener"
-                       class="whatsapp-btn">
+                        <h3>
+                            Have a project in mind?
+                        </h3>
 
-                        💬 WhatsApp Me
+                        <p>
+                            Send me a message and let's talk
+                            about what you want to build.
+                        </p>
 
-                    </a>
+                        <a
+                            href="mailto:alihassantech379@gmail.com">
+                            alihassantech379@gmail.com
+                        </a>
+
+                        <a
+                            href="https://wa.me/923146699063"
+                            target="_blank"
+                            rel="noopener"
+                            class="whatsapp-btn">
+
+                            💬 WhatsApp Me
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Formspree -->
+
+                    <form
+                        id="form"
+                        action="https://formspree.io/f/mbgjvyla"
+                        method="POST"
+                        class="contact-form">
+
+                        <label>
+
+                            Your name
+
+                            <input
+                                type="text"
+                                name="name"
+                                required
+                                autocomplete="name">
+
+                        </label>
+
+
+                        <label>
+
+                            Your email
+
+                            <input
+                                type="email"
+                                name="email"
+                                required
+                                autocomplete="email">
+
+                        </label>
+
+
+                        <label>
+
+                            Message
+
+                            <textarea
+                                name="message"
+                                rows="5"
+                                required></textarea>
+
+                        </label>
+
+
+                        <button
+                            class="btn main"
+                            type="submit">
+
+                            Send message
+
+                        </button>
+
+                    </form>
 
                 </div>
 
+            </div>
 
-                <!-- Formspree Contact Form -->
+        </section>
 
-                <form id="form"
-                      action="https://formspree.io/f/mbgjvyla"
-                      method="POST"
-                      class="contact-form">
-
-                    <label>
-
-                        Your name
-
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="Your name"
-                            required
-                            autocomplete="name">
-
-                    </label>
+    </main>
 
 
-                    <label>
+    <!-- ================= FOOTER ================= -->
 
-                        Your email
+    <footer class="footer">
 
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="you@example.com"
-                            required
-                            autocomplete="email">
+        <div class="wrap footer-inner">
 
-                    </label>
+            <p>
+                © 2026 Ali Hassan Tech
+            </p>
+
+            <p>
+                Learning • Building • Improving
+            </p>
+
+        </div>
+
+    </footer>
 
 
-                    <
+    <script src="Script.js"></script>
+
+</body>
+</html>
