@@ -50,9 +50,11 @@
     ]
   }
   </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
   <style>
 /* ===== Colors (light + dark) ===== */
 :root{
@@ -164,8 +166,7 @@ footer{padding:28px 0 36px;border-top:1px solid var(--line);color:var(--muted);f
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
-
-</style>
+  </style>
 </head>
 <body>
 
@@ -197,7 +198,7 @@ footer{padding:28px 0 36px;border-top:1px solid var(--line);color:var(--muted);f
         <p>I'm a beginner web developer building a real project with every new thing I learn.</p>
         <div class="btns">
           <a class="btn main" href="#projects">View my projects</a>
-          <a class="btn alt" href="#contact">Contact me</a>
+          <a class="btn" href="#contact">Contact me</a>
         </div>
       </div>
       <div class="editor" aria-hidden="true">
@@ -334,30 +335,34 @@ footer{padding:28px 0 36px;border-top:1px solid var(--line);color:var(--muted);f
           </div>
         </article>
         <article class="card">
-  <div class="shot" role="img" aria-label="Beauty parlour demo">💇</div>
-  <h3>Beauty Parlour Landing Page</h3>
-  <p>A demo website for a beauty parlour with services, gallery, timings and a booking form.</p>
-  <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span></div>
-  <div class="links">
-    <a href="https://alihassantechdev.github.io/beauty-demo/" target="_blank" rel="noopener">Live demo</a>
-    <a href="https://github.com/AliHassanTechDev/beauty-demo" target="_blank" rel="noopener">GitHub</a>
-  </div>
-</article>
+          <div class="shot" role="img" aria-label="Beauty parlour demo">💇</div>
+          <h3>Beauty Parlour Landing Page</h3>
+          <p>A demo website for a beauty parlour with services, gallery, timings and a booking form.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span></div>
+          <div class="links">
+            <a href="https://alihassantechdev.github.io/beauty-demo/" target="_blank" rel="noopener">Live demo</a>
+            <a href="https://github.com/AliHassanTechDev/beauty-demo" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
         <article class="card">
-  <div class="shot" role="img" aria-label="Restaurant API project">🔌</div>
-  <h3>Restaurant API</h3>
-  <p>REST API with Node.js, Express and MongoDB. Includes register and login with hashed passwords, JWT token auth, and order management.</p>
-  <div class="tags"><span>Node.js</span><span>Express</span><span>MongoDB</span><span>JWT</span></div>
-  <div class="links">
-    <a href="https://github.com/AliHassanTechDev/restaurant-api" target="_blank" rel="noopener">GitHub</a>
-  </div>
-</article>
-        <div class="project-card">
-  <h3>Clothing Store Demo</h3>
-  <p>Responsive online store with product listing, cart and checkout form.</p>
-  <a href="https://alihassantechdev.github.io/clothing-store-demo/" target="_blank">Live Demo</a>
-  <a href="https://github.com/AliHassanTechDev/clothing-store-demo" target="_blank">GitHub</a>
-</div>
+          <div class="shot" role="img" aria-label="Restaurant API project">🔌</div>
+          <h3>Restaurant API</h3>
+          <p>REST API with Node.js, Express and MongoDB. Includes register and login with hashed passwords, JWT token auth, and order management.</p>
+          <div class="tags"><span>Node.js</span><span>Express</span><span>MongoDB</span><span>JWT</span></div>
+          <div class="links">
+            <a href="https://github.com/AliHassanTechDev/restaurant-api" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="shot" role="img" aria-label="Clothing store demo">👕</div>
+          <h3>Clothing Store Demo</h3>
+          <p>Responsive online store with product listing, cart and checkout form.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span></div>
+          <div class="links">
+            <a href="https://alihassantechdev.github.io/clothing-store-demo/" target="_blank" rel="noopener">Live demo</a>
+            <a href="https://github.com/AliHassanTechDev/clothing-store-demo" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
       </div>
     </div></section>
 
@@ -371,11 +376,12 @@ footer{padding:28px 0 36px;border-top:1px solid var(--line);color:var(--muted);f
           <label>Your email<input type="email" name="email" required autocomplete="email"></label>
           <label>Message<textarea name="message" rows="4" required></textarea></label>
           <button class="btn main" type="submit">Send message</button>
+          <p id="note"></p>
         </form>
         <div class="ways">
           <a href="mailto:alihassantech379@gmail.com">Email: alihassantech379@gmail.com</a>
           <a href="https://github.com/AliHassanTechDev" target="_blank" rel="noopener">GitHub: AliHassanTechDev</a>
-          <a href="https://wa.me/923146699063" target="_blank" rel="noopener">💬 WhatsApp Me</a>
+          <a href="https://www.linkedin.com/in/alihassan-ali-843782423/" target="_blank" rel="noopener">LinkedIn: Alihassan Ali</a>
         </div>
       </div>
     </div></section>
@@ -383,84 +389,66 @@ footer{padding:28px 0 36px;border-top:1px solid var(--line);color:var(--muted);f
   </main>
 
   <footer>
-    <div class="wrap">
-      © 2026 Ali Hassan Tech. All rights reserved. Built with HTML, CSS and JavaScript 💙
-    </div>
+    <div class="wrap">© 2026 Ali Hassan Tech. Built with HTML, CSS and JavaScript.</div>
   </footer>
 
   <script>
-// ===== Theme (light/dark, remembers your choice) =====
-var root = document.documentElement;
-var themeBtn = document.getElementById("theme");
+    // Theme toggle
+    const themeBtn = document.getElementById("theme");
+    themeBtn.addEventListener("click", () => {
+      const root = document.documentElement;
+      const isDark = root.getAttribute("data-theme") === "dark";
+      root.setAttribute("data-theme", isDark ? "light" : "dark");
+      themeBtn.textContent = isDark ? "☀️" : "🌙";
+    });
 
-function currentTheme() {
-  return root.getAttribute("data-theme") || "light";
-}
+    // Mobile menu
+    const menuBtn = document.getElementById("menu");
+    const nav = document.getElementById("nav");
+    menuBtn.addEventListener("click", () => {
+      const open = nav.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", open);
+    });
+    nav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => nav.classList.remove("open"));
+    });
 
-function applyTheme(theme) {
-  root.setAttribute("data-theme", theme);
-  themeBtn.textContent = theme === "dark" ? "🌙" : "☀️";
-}
+    // Typing effect
+    const words = ["HTML, CSS and JavaScript", "Responsive design", "React and Node.js"];
+    const typingEl = document.getElementById("typing-text");
+    let wordIndex = 0, charIndex = 0, deleting = false;
+    function type() {
+      const word = words[wordIndex];
+      typingEl.textContent = deleting ? word.substring(0, charIndex--) : word.substring(0, charIndex++);
+      let delay = deleting ? 50 : 90;
+      if (!deleting && charIndex > word.length) { deleting = true; delay = 1400; }
+      if (deleting && charIndex < 0) { deleting = false; wordIndex = (wordIndex + 1) % words.length; charIndex = 0; delay = 300; }
+      setTimeout(type, delay);
+    }
+    type();
 
-var startTheme = null;
-try { startTheme = localStorage.getItem("theme"); } catch (e) {}
-if (!startTheme) {
-  startTheme = "light";
-}
-applyTheme(startTheme);
-
-themeBtn.addEventListener("click", function () {
-  var next = currentTheme() === "dark" ? "light" : "dark";
-  applyTheme(next);
-  try { localStorage.setItem("theme", next); } catch (e) {}
-});
-
-// ===== Mobile menu =====
-var nav = document.getElementById("nav");
-var menuBtn = document.getElementById("menu");
-
-menuBtn.addEventListener("click", function () {
-  var open = nav.classList.toggle("open");
-  menuBtn.setAttribute("aria-expanded", open);
-});
-
-nav.addEventListener("click", function (e) {
-  if (e.target.tagName === "A") {
-    nav.classList.remove("open");
-    menuBtn.setAttribute("aria-expanded", "false");
-  }
-});
-
-// ===== Typing text in hero =====
-var words = ["HTML & CSS", "JavaScript", "responsive websites", "web development"];
-var typingEl = document.getElementById("typing-text");
-var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-var w = 0, c = 0, deleting = false;
-
-function type() {
-  var word = words[w];
-  typingEl.textContent = word.slice(0, c);
-  var delay = deleting ? 45 : 90;
-
-  if (!deleting && c === word.length) {
-    deleting = true;
-    delay = 1400;
-  } else if (deleting && c === 0) {
-    deleting = false;
-    w = (w + 1) % words.length;
-    delay = 400;
-  } else {
-    c += deleting ? -1 : 1;
-  }
-  setTimeout(type, delay);
-}
-
-if (typingEl && !reduceMotion) {
-  type();
-}
-
-// Contact form: sent by Formspree (action in index.html), so no JS needed.
-
-</script>
+    // Contact form (Formspree)
+    const form = document.getElementById("form");
+    const note = document.getElementById("note");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      note.textContent = "Sending...";
+      try {
+        const res = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" }
+        });
+        if (res.ok) {
+          note.textContent = "Shukriya! Aap ka message mil gaya.";
+          form.reset();
+        } else {
+          note.textContent = "Kuch masla aaya. Email par try karein.";
+        }
+      } catch {
+        note.textContent = "Internet check karein aur dobara try karein.";
+      }
+    });
+  </script>
 </body>
 </html>
